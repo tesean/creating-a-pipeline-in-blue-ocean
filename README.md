@@ -25,6 +25,8 @@ Note: If you don’t see this box, click **New Pipeline** at the top right.
 
 4. I've already connected this instance to my github for you, so just choose **NsccItTruro**.
 
+![Git Repo](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/git.png "Git Settings")
+
 5. Select your groups' **Jenkins-Pipeline-Demo**
 
 6. (OPTIONAL) - Set Pipeline name
@@ -36,7 +38,7 @@ Note: Under the hood, a Pipeline project created through Blue Ocean is actually 
 
 ## Configure Your Pipeline
 1. Following on from creating your Pipeline project (above), in the Pipeline editor, select docker from the Agent dropdown in the Pipeline Settings panel on the right.
-![Pipeline Settings] ()
+![Pipeline Settings](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/35-deliver-stage-pauses-for-user-input.png "Pipline Settings")
 
 2. In the Image and Args fields that appear, specify `node:15-alpine` and `-p 3000:3000` respectively. (Note: this requires the docker plugin, which I installed for you)
 ![Agent Section] ()
@@ -48,14 +50,16 @@ Note: Under the hood, a Pipeline project created through Blue Ocean is actually 
 5. In this panel, click **Shell Script** near the top of the list (to choose that step type), which opens the **Build / Shell Script** panel, where you can enter this step’s values.
 
 6. In the **Build / Shell Script** panel, specify `npm install`.
-![Shell Step] ()
+
+![Shell Step](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/16-specifying-a-shell-step-value.png "Shell Step")
 
 7. ( Optional ) Click the top-left back arrow icon Return from step icon to return to the main Pipeline editor.
 
 8. Click the **Save** button at the top right to begin saving your new Pipeline with its "Build" stage.
 
 9. In the **Save Pipeline** dialog box, specify the commit message in the Description field (e.g. `Add initial Pipeline (Jenkinsfile)`).
-![Save Pipeline] ()
+
+![Save Pipeline](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/18-save-pipeline-dialog-box.png "Pipeline Dialogue")
 
 10. Leaving all other options as is, **click Save & run** and Jenkins proceeds to build your Pipeline.
 
@@ -73,7 +77,8 @@ Note: You may need to wait several minutes for this first run to complete. Durin
 * It's normal to see several warnings.
 
  (During this time, npm downloads many dependencies necessary to run your Node.js and React application, which will ultimately be stored in the local node_modules directory within the Jenkins home directory).
-![Run Build] ()
+
+![Run Build](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/19-initial-pipeline-downloading-npm-dependencies.png "Run Build")
 
 ## Add a Test Stage to your Pipeline
 
@@ -82,7 +87,8 @@ Note: You may need to wait several minutes for this first run to complete. Durin
 2. Click the master branch’s "Edit Pipeline" (pencil) icon on branch to open the Pipeline editor for this branch.
 
 3. In the main Pipeline editor, click the + icon to the right of the Build stage you created above to open the new stage panel on the right.
-![Add Test Stage] ()
+
+![Add Test Stage](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/22-add-test-stage.png "Add Stage")
 
 4. In this panel, type `Test` in the **Name your stage** field and then click the Add Step button below to open the Choose step type panel.
 
@@ -95,7 +101,7 @@ Note: You may need to wait several minutes for this first run to complete. Durin
 8. Click the + icon at the right of the **Environment** heading (for which you’ll configure an environment directive).
 
 9. In the **Name** and **Value** fields that appear, specify `CI` and `true`, respectively.
-![Environement] ()
+![Environement](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/23-environment-directive.png "Set Environment")
 
 10. ( Optional ) Click the top-left back arrow icon Return from step icon to return to the main Pipeline editor.
 
@@ -108,7 +114,8 @@ Note: You may need to wait several minutes for this first run to complete. Durin
 14. When the main Blue Ocean interface appears, click the top row to see Jenkins build your Pipeline project.
 Note: You’ll notice from this run that Jenkins no longer needs to download the Node Docker image. Instead, Jenkins only needs to run a new container from the Node image downloaded previously. Therefore, running your Pipeline this subsequent time should be much faster.
 If your amended Pipeline ran successfully, here’s what the Blue Ocean interface should look like. Notice the additional "Test" stage. You can click on the previous "Build" stage circle to access the output from that stage.
-![Test Success] ()
+
+![Test Success](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/24-test-stage-runs-successfully-with-output.png "Test Success")
 
 ## Add a final deliver stage to your Pipeline
 
@@ -117,24 +124,26 @@ If your amended Pipeline ran successfully, here’s what the Blue Ocean interfac
 2. Click the master branch’s "Edit Pipeline" icon Edit Pipeline on branch to open the Pipeline editor for this branch.
 
 3. In the main Pipeline editor, click the + icon to the right of the **Test** stage you created above to open the new stage panel.
-![Add Deploy] ()
+
+![Add Deliver Stage](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/31-add-deliver-stage.png "Deliver Stage")
 
 4. In this panel, type `Deliver` in the **Name your stage** field and then click the **Add Step** button below to open the Choose step type panel.
 
 5. In this panel, click **Shell Script** near the top of the list.
 
 6. In the resulting **Deliver / Shell Script** panel, specify `./jenkins/scripts/deliver.sh` and then click the top-left back arrow icon Return from step icon to return to the Pipeline stage editor.
-![Add Next Step] ()
+
+![Add Next Step](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/32-add-next-step.png "Add Next Step")
 
 7. Click the **Add Step** button again.
 
 8. In the **Choose step type** panel, type `input` into the Find steps by name field.
-![Search Input] ()
+![Search Input](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/33-choosing-input-step-type.png "Search Input")
 
 9. Click the filtered **Wait for interactive input** step type.
 
 10. In the resulting **Deliver / Wait for interactive input** panel, specify `Finished using the web site? (Click "Proceed" to continue)` in the **Message** field and then click the top-left back arrow icon Return from step icon to return to the Pipeline stage editor.
-![Input Step] ()
+![Input Step](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/34-specifying-input-step-message-value.png "Input Step")
 
 11. Click the Add Step button (last time).
 
@@ -153,7 +162,7 @@ Note: For an explanation of this step, refer to the kill.sh file itself located 
 
 18. When the main Blue Ocean interface appears, click the top row to see Jenkins build your Pipeline project.
 If your amended Pipeline ran successfully, here’s what the Blue Ocean interface should look like. Notice the additional "Deliver" stage. Click on the previous "Test" and "Build" stage circles to access the outputs from those stages.
-![Input Pause] ()
+![Input Pause](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/35-deliver-stage-pauses-for-user-input.png "Pause")
 
 19. Ensure you are viewing the "Deliver" stage (click it if necessary), then click the green `./jenkins/scripts/deliver.sh` step to expand its content and scroll down until you see the `http://localhost:3000` link.
 
