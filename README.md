@@ -39,7 +39,7 @@ Note: Under the hood, a Pipeline project created through Blue Ocean is actually 
 ![Pipeline Settings] ()
 
 2. In the Image and Args fields that appear, specify `node:15-alpine` and `-p 3000:3000` respectively. (Note: this requires the docker plugin, which I installed for you)
-![Agent Section] ()
+![Agent Section] (https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/12-agent-section.png "Agent Section")
 
 3. Back in the main Pipeline editor, click the **+** icon, which opens the new stage panel on the right.
 
