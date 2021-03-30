@@ -1,5 +1,14 @@
 # creating-a-pipeline-in-blue-ocean
 
+## Launch Jenkins
+Powershell:
+1. `docker run --name jenkins-docker --rm --detach --privileged --network jenkins --network-alias docker --env DOCKER_TLS_CERTDIR=/certs --volume jenkins-docker-certs:/certs/client --volume jenkins-data:/var/jenkins_home docker:dind`
+2. `docker run --name jenkins-blueocean --rm --detach --network jenkins --env DOCKER_HOST=tcp://docker:2376 --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 --volume jenkins-data:/var/jenkins_home --volume jenkins-docker-certs:/certs/client:ro --publish 8080:8080 --publish 50000:50000 jenkinsci/blueocean`
+3. Open Chrome and visit `http://localhost:8080`
+4. Login U: itstudent P: It$tudent5
+
+
+
 This repository is for the
 [Create a Pipeline in Blue Ocean](https://jenkins.io/doc/tutorials/create-a-pipeline-in-blue-ocean/)
 tutorial in the [Jenkins User Documentation](https://jenkins.io/doc/).
