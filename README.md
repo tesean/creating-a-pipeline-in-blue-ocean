@@ -12,6 +12,11 @@ Powershell:
 5. Find your password: Launch Docker Desktop -> Containers\Apps -> Jenkins-BlueOcean - Logs ![Default Password](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/pwSnip.png "Default Password")
 6. Install Suggested Plugins && NodeJS Plugin
 7. Create first user: U:itstudent P:It$tudent5
+8. We should now be up and running. Test login.
+9. We need to add a couple more plugins though...
+10. From the Jenkins Dashboard click Manage Jenkins -> Manage Plugins -> available -> type docker
+![Plugins](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/plugins.png "Plugins")
+11. Check off  Docker and Docker Pipelne and install.
 
 ## Create your Repo
 You may choose to start with a blank repo and copy source files, you may clone the provided repo or you can create a fork of the repo:
