@@ -44,7 +44,7 @@ Note: If you don’t see this box, click **New Pipeline** at the top right.
 
 5. Select your repo.
 
-6. (OPTIONAL) - Set Pipeline name
+6. (OPTIONAL) - Set Pipeline name. If you already have a pipeline using the same repo you'll be able to provide a different name.
 
 7. Click **Create Pipeline**.
 
