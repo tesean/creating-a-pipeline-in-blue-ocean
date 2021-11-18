@@ -33,11 +33,11 @@ Note: If you don’t see this box, click **New Pipeline** at the top right.
 
 3. In **Where do you store your code?**, click GitHub.
 
-4. I've already connected this instance to my github for you, so just choose **NsccItTruro**.
+4. If you have cloned or forked the provided repo follow the link to create an auth token, accept all the defaults. Paste the token in to the box to link your account to Jenkins.
 
 ![Git Repo](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/git.png "Git Settings")
 
-5. Select your groups' **Jenkins-Pipeline-Demo**
+5. Select your repo.
 
 6. (OPTIONAL) - Set Pipeline name
 
