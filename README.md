@@ -53,7 +53,7 @@ Note: Under the hood, a Pipeline project created through Blue Ocean is actually 
 
 ## Configure Your Pipeline
 1. Following on from creating your Pipeline project (above), in the Pipeline editor, select docker from the Agent dropdown in the Pipeline Settings panel on the right.
-![Pipeline Settings](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/pipeline.png "Pipline Settings")
+![Pipeline Settings](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/pipelineSettings.png "Pipline Settings")
 
 2. In the Image and Args fields that appear, specify `node:15-alpine` and `-p 3000:3000` respectively. (Note: this requires the docker plugin, which I installed for you)
 ![Agent Section](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/12-agent-section.png "Agent Section")
