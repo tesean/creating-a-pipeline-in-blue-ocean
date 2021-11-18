@@ -13,6 +13,13 @@ Powershell:
 6. Install Suggested Plugins && NodeJS Plugin
 7. Create first user: U:itstudent P:It$tudent5
 
+## Create your Repo
+You may choose to start with a blank repo and copy source files, you may clone the provided repo or you can create a fork of the repo:
+https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/
+
+There are a few scripts in the jenkins/scripts folder that will need to be executable. If you run into errors executing these scripts you can solve it by running:
+`git update-index --chmod=+x` & commiting the change `git commit -m "Executable!"`
+
 ## Create Your Pipeline
 1. Go back to Jenkins and ensure you have accessed the Blue Ocean interface. To do this, make sure you:
 
