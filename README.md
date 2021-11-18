@@ -19,8 +19,12 @@ Powershell:
 11. Check off  Docker and Docker Pipelne and install.
 
 ## Create your Repo
+It's esiest to connect Jenkins to a Github hosted repository, so you'll want to get a copy of this repo for your own account.
 You may choose to start with a blank repo and copy source files, you may clone the provided repo or you can create a fork of the repo:
 https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/
+
+The quickest option is to fork the repo, just a single click:
+![Frok](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/fork.png "Fork")
 
 There are a few scripts in the jenkins/scripts folder that will need to be executable. If you run into errors executing these scripts you can solve it by running:
 `git update-index --chmod=+x` & commiting the change `git commit -m "Executable!"`
