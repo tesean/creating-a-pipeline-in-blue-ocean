@@ -53,7 +53,7 @@ Note: Under the hood, a Pipeline project created through Blue Ocean is actually 
 
 ## Configure Your Pipeline
 1. Following on from creating your Pipeline project (above), in the Pipeline editor, select docker from the Agent dropdown in the Pipeline Settings panel on the right.
-![Pipeline Settings](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/35-deliver-stage-pauses-for-user-input.png "Pipline Settings")
+![Pipeline Settings](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/pipeline.png "Pipline Settings")
 
 2. In the Image and Args fields that appear, specify `node:15-alpine` and `-p 3000:3000` respectively. (Note: this requires the docker plugin, which I installed for you)
 ![Agent Section](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/12-agent-section.png "Agent Section")
@@ -78,7 +78,7 @@ Note: Under the hood, a Pipeline project created through Blue Ocean is actually 
 
 10. Leaving all other options as is, **click Save & run** and Jenkins proceeds to build your Pipeline.
 
-11. When the main Blue Ocean interface appears, click the row to see Jenkins build your Pipeline project.
+11. When the main Blue Ocean interface appears, **click the row** to see Jenkins build your Pipeline project.
 Note: You may need to wait several minutes for this first run to complete. During this time, Jenkins does the following:
 
 * Commits your Pipeline as a Jenkinsfile to the only branch (i.e. master) of your repository.
