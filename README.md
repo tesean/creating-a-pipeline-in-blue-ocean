@@ -55,7 +55,7 @@ Note: Under the hood, a Pipeline project created through Blue Ocean is actually 
 1. Following on from creating your Pipeline project (above), in the Pipeline editor, select docker from the Agent dropdown in the Pipeline Settings panel on the right.
 ![Pipeline Settings](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/PipelineSettings.png "Pipline Settings")
 
-2. In the Image and Args fields that appear, specify `node:15-alpine` and `-p 3000:3000` respectively. (Note: this requires the docker plugin, which I installed for you)
+2. In the Image and Args fields that appear, specify `node:15-alpine` and `-p 3000:3000` respectively. (Note: this requires the docker plugin, to spin up the new container for your app. Once launched you can hit in in your browser using the specifiec port: http://localhost:3000))
 ![Agent Section](https://github.com/NsccTruroIT/creating-a-pipeline-in-blue-ocean/blob/master/jenkins/screenshots/12-agent-section.png "Agent Section")
 
 3. Back in the main Pipeline editor, click the **+** icon, which opens the new stage panel on the right.
